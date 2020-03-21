@@ -1,0 +1,16 @@
+import random
+
+myGuess=-1
+count=0
+
+while(myGuess!=randNum):
+
+  myGuess=int(input("Make a guess: "))
+  count=count+1
+ 
+  if(myGuess > randNum):
+    print("Guess lower")
+  elif(myGuess < randNum):
+    print("Guess higher")
+  else:
+    print("You are correct and the number of tries to get here were:",count)
