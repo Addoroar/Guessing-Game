@@ -1,16 +1,37 @@
 import random
 
-myGuess=-1
+rangeLower=0
+rangeUpper=100
+
+randNum=random.randint(rangeLower,rangeUpper)
+
+myGuess=0
 count=0
 
-while(myGuess!=randNum):
+#while(myGuess!=randNum):
 
-  myGuess=int(input("Make a guess: "))
-  count=count+1
- 
-  if(myGuess > randNum):
-    print("Guess lower")
-  elif(myGuess < randNum):
-    print("Guess higher")
-  else:
-    print("You are correct and the number of tries to get here were:",count)
+#  myGuess=int(input("Make a guess: "))
+#  count=count+1
+  
+#  if(myGuess > randNum):
+#    print("Guess lower")
+#  elif(myGuess < randNum):
+#    print("Guess higher")
+#  else:
+#    print("You are correct and the number of tries to get here were:",count)
+
+
+while(myGuess!=randNum):
+    
+    myGuess=random.randint(rangeLower,rangeUpper)
+    count=count+1
+  
+    if(myGuess > randNum):
+        print(rangeLower,rangeUpper)
+        rangeUpper=myGuess
+    elif(myGuess < randNum):
+        print(rangeLower,rangeUpper)
+        rangeLower=myGuess
+    else:
+        print(rangeLower,rangeUpper)
+        print("You are correct and the number of tries to get here were:",count)
